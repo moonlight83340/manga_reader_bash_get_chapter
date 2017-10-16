@@ -58,11 +58,14 @@ getPageCount () {
 
 # returns count of chapter
 # @param string URL of manga page
+# @param string manga name
 # @return count
 # @access private
 getChapterCount () {
 	local URL=$1
-    local ChapterCount=$(wget -q "${URL}" -O - | grep -oP 'href="/onepunch-man/[0-9]+"' | tail -1  | grep -oP '[0-9]+')
+	local name=$2
+	echo $name
+    local ChapterCount=$(wget -q "${URL}" -O - | grep -oP 'href="/'"${name}"'/[0-9]+"' | tail -1  | grep -oP '[0-9]+')
     return $ChapterCount;
 }
 
