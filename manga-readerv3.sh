@@ -127,7 +127,7 @@ getPages () {
 }
 
 usage(){
-	echo "Usage: ./manga-readerv2.sh <name-of-manga> [target-dir]";
+	echo "Usage: ./manga-readerv3.sh <name-of-manga> [target-dir]";
 	exit 1;
 }
 
