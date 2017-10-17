@@ -122,7 +122,7 @@ if [ "$1" = "-h" ] || [ "$1" = "--help" ] || [ "$1" = "usage" ];then
 	exit 0
 fi
 
-if [ ! $# -eq 2 ]; then
+if [ ! $# -lt 3 ]; then
 	usage
 fi
 get $1 $2 $3

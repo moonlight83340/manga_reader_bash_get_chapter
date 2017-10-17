@@ -138,7 +138,7 @@ if [ "$1" = "-h" ] || [ "$1" = "--help" ] || [ "$1" = "usage" ];then
 	exit 0
 fi
 
-if [ ! $# -eq 1 ]; then
+if [ ! $# -lt 2 ]; then
 	usage
 fi
 URL="http://www.mangareader.net/${1}"
